@@ -104,7 +104,8 @@ rest.
 - Runs fully offline -- Stockfish, YOLO weights, and the ONNX classifier
   all load from disk; nothing calls out to the internet
 - Live Stockfish analysis streams over a WebSocket as depth increases
-  (currently capped at depth 40 / 12s per position, whichever hits first)
+  (up to depth 50, capped at 12s per position by default -- toggleable
+  in-app, so you can turn the time cap off and let it run to full depth)
 
 ## Troubleshooting
 
@@ -133,9 +134,12 @@ Expected for unsigned PyInstaller executables, especially large ones.
 Users will need to click "More info -> Run anyway" the first time.
 
 **Analysis feels slow / freezes when moving pieces quickly.**
-Each analysis is capped at depth 40 or 12 seconds (see
-`StockfishEngine(depth=40, move_time=12)` in
-`prior_requirements/backend/main.py`).
+Each analysis is capped at depth 50 or 12 seconds by default (see
+`StockfishEngine(depth=50, move_time=12)` in
+[`prior_requirements/backend/main.py`](prior_requirements/backend/main.py)).
 Moving to a new position cancels the previous still-running analysis
-rather than letting it finish unattended. If 12s still feels too slow,
-lower that number -- it's the only thing that needs to change.
+rather than letting it finish unattended. The 12s cap can also be turned
+off directly in the app (a toggle on the Analysis screen: "Max analysis
+limit per position: 12s") to let a position run to full depth instead --
+useful for a single position you want a stronger read on, though of
+course each analysis then takes longer.
