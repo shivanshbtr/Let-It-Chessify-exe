@@ -1,0 +1,3 @@
+# Install with: pip install -r backend\requirements.txt -r requirements-desktop.txt
+pywebview>=5.0
+pyinstaller>=6.6.0
