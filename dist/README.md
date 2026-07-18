@@ -4,7 +4,7 @@ This folder is **not stored in this git repo**. It holds the pre-built,
 ready-to-run app (`dist/LetItChessify/`) for anyone who'd rather skip
 building it themselves and just run the `.exe` directly.
 
-**Download it here:** [drive.google.com/file/d/1xe-0k_YFWtaFtFa55H7sIwoq79OHB64B/view?usp=sharing](https://drive.google.com/file/d/1xe-0k_YFWtaFtFa55H7sIwoq79OHB64B/view?usp=sharing)
+**Download it here:** [https://drive.google.com/file/d/1wwWdRplX81SS727koL6J8ySdgqmxImT0/view?usp=sharing](https://drive.google.com/file/d/1wwWdRplX81SS727koL6J8ySdgqmxImT0/view?usp=sharing)
 
 ## Setup
 
