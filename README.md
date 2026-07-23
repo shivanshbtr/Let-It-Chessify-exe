@@ -143,3 +143,8 @@ off directly in the app (a toggle on the Analysis screen: "Max analysis
 limit per position: 12s") to let a position run to full depth instead --
 useful for a single position you want a stronger read on, though of
 course each analysis then takes longer.
+
+## License
+
+MIT
+
