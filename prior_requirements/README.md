@@ -25,7 +25,7 @@ folder this size.
      	desktop_app.py
      	build.bat
      	requirements.txt
-      README.md
+       README.md
        app_icon.ico
        LICENSE
      	prior_requirements/        <- extracted here
