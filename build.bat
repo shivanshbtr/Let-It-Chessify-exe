@@ -51,6 +51,7 @@ pyinstaller desktop_app.py ^
   --name LetItChessify ^
   --onedir ^
   --noconfirm ^
+  --icon app_icon.ico ^
   --paths %SRC% ^
   --collect-all ultralytics ^
   --collect-all onnxruntime ^
