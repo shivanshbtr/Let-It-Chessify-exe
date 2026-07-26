@@ -13,6 +13,15 @@ Frozen (after PyInstaller build):
 
 See BUILD_WINDOWS.md for how to package this into a .exe.
 """
+
+# Deliberately the very first line of code in the whole file -- before any
+# import, before the stdout-buffering setup below. print() is a builtin,
+# so it needs nothing else to have already run. flush=True means this
+# doesn't even depend on the buffering reconfiguration a few lines down --
+# it's written to the console immediately regardless of Python's default
+# buffering mode for this process.
+print("[desktop_app] Starting Let It Chessify... loading models, this takes ~10-15s.", flush=True)
+
 import sys
 import os
 
@@ -22,16 +31,6 @@ try:
     sys.stderr.reconfigure(line_buffering=True)
 except Exception:
     pass
-
-# Printed here, before anything else, on purpose: `from backend.main import
-# app` further down pulls in cv2/torch/ultralytics/onnxruntime and loads
-# the classifier's ONNX models at import time -- all of which happens
-# BEFORE main() (further below) ever runs. Printing this message from
-# inside main() meant the terminal sat blank for the entire 30-40s of
-# that import/load work with zero feedback. Printing it immediately here
-# means it's the very first thing the terminal shows, before any of that
-# heavy lifting begins.
-print("[desktop_app] Starting Let It Chessify... loading models, this takes ~10-15s.")
 
 import time
 import threading
