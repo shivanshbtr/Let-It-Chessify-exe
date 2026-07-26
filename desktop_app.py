@@ -23,6 +23,16 @@ try:
 except Exception:
     pass
 
+# Printed here, before anything else, on purpose: `from backend.main import
+# app` further down pulls in cv2/torch/ultralytics/onnxruntime and loads
+# the classifier's ONNX models at import time -- all of which happens
+# BEFORE main() (further below) ever runs. Printing this message from
+# inside main() meant the terminal sat blank for the entire 30-40s of
+# that import/load work with zero feedback. Printing it immediately here
+# means it's the very first thing the terminal shows, before any of that
+# heavy lifting begins.
+print("[desktop_app] Starting Let It Chessify... loading models, this takes ~10-15s.")
+
 import time
 import threading
 from pathlib import Path
@@ -111,8 +121,6 @@ def wait_for_server(url: str, timeout: float = 30.0) -> bool:
 
 
 def main():
-    print("[desktop_app] Starting Let It Chessify... loading models, this takes ~10-15s.")
-
     server_thread = threading.Thread(target=run_server, daemon=True)
     server_thread.start()
 
