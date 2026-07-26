@@ -23,6 +23,8 @@ Let-It-Chessify-exe/
   	build.bat                                Automates the full Windows build
   	requirements.txt                    pywebview + pyinstaller
   	README.md                       This file
+    app_icon.ico                    Icon for exe
+    LICENSE                         MIT License
   	prior_requirements/
     		README.md               Points to the Drive-hosted source zip + setup steps
   	dist/
