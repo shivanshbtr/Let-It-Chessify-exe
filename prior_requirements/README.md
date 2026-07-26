@@ -26,6 +26,8 @@ folder this size.
      	build.bat
      	requirements.txt
      	README.md
+      app_icon.ico
+      LICENSE
      	prior_requirements/        <- extracted here
        	backend/
        	frontend/
