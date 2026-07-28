@@ -10,7 +10,7 @@ original project repo — **https://github.com/shivanshbtr/Let-It-Chessify**
 — zipped and hosted on Google Drive since GitHub isn't a good fit for a
 folder this size.
 
-**Download it here:** [https://drive.google.com/file/d/1DLbZh4UGfqnM4RkKs8mWtdFmpteiJkjz/view?usp=sharing](https://drive.google.com/file/d/1DLbZh4UGfqnM4RkKs8mWtdFmpteiJkjz/view?usp=sharing)
+**Download it here:** [https://drive.google.com/file/d/1_LGHjUV1FrXblGPnfQ60fzPoHDIIDUPv/view?usp=sharing](https://drive.google.com/file/d/1_LGHjUV1FrXblGPnfQ60fzPoHDIIDUPv/view?usp=sharing)
 
 ## Setup
 
